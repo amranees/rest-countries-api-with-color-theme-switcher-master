@@ -1,0 +1,21 @@
+* {
+  box-shadow: 0 0 0 0 !important;
+}
+
+body {
+  color: hsl(0deg, 0%, 100%);
+}
+
+header,
+.info,
+.search,
+.search input,
+.select,
+.select span {
+  background: hsl(209deg, 23%, 22%) !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.container {
+  background-color: hsl(207deg, 26%, 17%);
+}/*# sourceMappingURL=theme.css.map */

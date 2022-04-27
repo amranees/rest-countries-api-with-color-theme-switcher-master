@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+
+body {
+  height: 200vh;
+  font-family: "Nunito Sans", sans-serif;
+  color: hsl(200deg, 15%, 8%);
+}
+
+#theme {
+  transition: 0.5s;
+}
+
+header {
+  padding: 30px 10px;
+  box-shadow: 0 0 20px rgb(211, 211, 211);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header h3 {
+  font-size: 0.9em;
+}
+header .theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .theme span {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 800;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 30px 15px;
+  background-color: hsl(0deg, 0%, 98%);
+}
+.container .top .search {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(211, 211, 211);
+  position: relative;
+}
+.container .top .search i {
+  margin-left: 0px;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+  position: absolute;
+  color: hsl(0deg, 0%, 52%);
+  cursor: pointer;
+}
+.container .top .search input {
+  margin-left: 30px;
+  padding: 20px;
+  border: 0;
+  background-color: inherit;
+}
+.container .top .search input:focus {
+  outline: 0;
+}
+.container .top .select {
+  width: 190px;
+  margin-top: 30px;
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.container .top .select span {
+  display: block;
+  background-color: inherit;
+  padding: 15px;
+  padding-right: 50px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgb(211, 211, 211);
+}
+.container .top .select span i {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 12px;
+}
+.container .top .select .drop-down {
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  padding: 20px;
+  background-color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: -160px;
+}
+.container .top .select .drop-down li {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.container .top .select .drop-down.active {
+  height: auto;
+  opacity: 1;
+}
+.container .countries-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 60px;
+  justify-content: center;
+}
+.container .countries-container .loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2196078431);
+}
+.container .countries-container .loading circle {
+  stroke: #4CAF50;
+  stroke-width: 1px;
+  stroke-dasharray: 81.1550674438;
+  stroke-dashoffset: -81.1550674438;
+  fill: none;
+  transform-origin: center center;
+  -webkit-animation: anime 3s linear infinite;
+          animation: anime 3s linear infinite;
+}
+@-webkit-keyframes anime {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke: #E91E63;
+    transform: rotate(-60deg);
+  }
+  50% {
+    stroke: #2196F3;
+  }
+  70% {
+    stroke: #2196F3;
+  }
+  100% {
+    stroke-dashoffset: -162.155067;
+    transform: rotate(-300deg);
+  }
+}
+@keyframes anime {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke: #E91E63;
+    transform: rotate(-60deg);
+  }
+  50% {
+    stroke: #2196F3;
+  }
+  70% {
+    stroke: #2196F3;
+  }
+  100% {
+    stroke-dashoffset: -162.155067;
+    transform: rotate(-300deg);
+  }
+}
+.container .countries-container .country {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container .countries-container .country .country-flag {
+  width: 100%;
+}
+.container .countries-container .country .country-flag img {
+  width: 100%;
+  background-size: contain;
+}
+.container .countries-container .country .info {
+  padding: 20px;
+}
+.container .countries-container .country .info .country-name {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.container .countries-container .country .info > span {
+  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.container .countries-container .country .info > span > span {
+  font-weight: 100;
+  font-size: 0.9em;
+}
+.container .countries-container .see-more {
+  width: 150px;
+  margin: auto;
+  padding: 8px;
+  overflow: hidden;
+  border: 1px solid;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.container .countries-container .see-more span {
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+@media (min-width: 200px) and (max-width: 639px) {
+  .container .countries-container {
+    grid-template-columns: 100%;
+  }
+}
+@media (min-width: 350px) {
+  .container {
+    padding: 40px;
+  }
+}
+@media (min-width: 640px) {
+  header {
+    justify-content: space-around;
+  }
+  header h3 {
+    font-size: 1.3em !important;
+  }
+  header .theme span {
+    font-size: 1em;
+  }
+  header .theme i {
+    font-size: 1.5em;
+  }
+
+  .container .top .select {
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+  .container .countries-container .country .country-flag {
+    height: 160px;
+  }
+  .container .top .search input {
+    padding: 25px;
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=main.css.map */

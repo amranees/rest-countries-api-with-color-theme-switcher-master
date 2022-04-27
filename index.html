@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="" id="theme">
+    <link rel="stylesheet" href="./assets/css/fontello.css">
+</head>
+
+<body>
+    <header>
+        <h3>Where in the world</h3>
+        <div class="theme">
+            <i class="icon-moon"></i>
+            <span>Dark Mode</span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="top">
+            <div class="search">
+                <i class="icon-search"></i>
+                <input type="text" placeholder="Search for a country...">
+            </div>
+
+            <div class="select">
+                <span> Filter With Region <i class="icon-down-open"></i></span>
+                <ul class="drop-down">
+                    <li>All</li>
+                    <li>Africa</li>
+                    <li>Americas</li>
+                    <li>Asia</li>
+                    <li>Oceania</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="countries-container">
+            <svg viewbox="0 0 100 100" class="loading">
+                <circle cy='50%' cx='50%' r='13'/>
+            </svg>
+            <div class="see-more">
+                <i class="icon-down"></i>
+                <span>see more</span>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

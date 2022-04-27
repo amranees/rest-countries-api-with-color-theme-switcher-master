@@ -1,0 +1,31 @@
+$padding: 15px;
+$border-r: 8px;
+$shadow: 0 0 20px rgb(211 211 211);
+$homepage-items: 14px;
+$detail-page: 16px;
+$colors: ( dark-blue-dark-mode-elements: hsl(209, 23%, 22%), very-dark-blue-dark-mode-background: hsl(207, 26%, 17%), very-dark-blue-light-mode-text: hsl(200, 15%, 8%), dark-gray-light-mode-input: hsl(0, 0%, 52%), very-light-gray-light-mode-background: hsl(0, 0%, 98%), white-Dark: hsl(0, 0%, 100%), );
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+* {
+    box-shadow: 0 0 0 0!important;
+}
+
+body {
+    color: color(white-Dark);
+}
+
+header,
+.info,
+.search,
+.search input,
+.select,
+.select span {
+    background: color(dark-blue-dark-mode-elements)!important;
+    color: color(white-Dark) !important;
+}
+
+.container {
+    background-color: color(very-dark-blue-dark-mode-background);
+}
